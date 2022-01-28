@@ -1,23 +1,19 @@
 import java.io.File;
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Set;
+
 
 public class HTMLFormater {
 
     private HTMLFormater(){}
-    private static final String PATHTOFICHES = "./res/fichesAgents/";
 
-
-    public static void generateHTML(){
-        System.out.println(HTMLFormater.existFiche(""));
+    public static void generateHTMLFile(){
+        System.out.println(HTMLFormater.element("Abcd","efgh","Rien",new HashMap<String,String>()));
     }
 
-    private static String[] readAgentsDirectory(){
-        File directoryFichesAgents = new File(HTMLFormater.PATHTOFICHES);
-        return directoryFichesAgents.list();
+    private static String element(String name, String surname, String tache, HashMap<String,String>equipement){
+        return String.format("<tr><td>%s</td><td>%s</td><td>%s</td></tr>",name,surname,tache);
     }
 
-    private static boolean existFiche(String surname){
-        return (new File(HTMLFormater.PATHTOFICHES+surname+"/"+surname+".txt")).exists();
-    }
 
 }

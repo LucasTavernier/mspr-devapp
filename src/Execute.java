@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class Execute {
 
     public static void main(String[] args) {
-        HTMLFormater.generateHTML();
+        HTMLFormater.generateHTMLFile();
     }
 
 }
