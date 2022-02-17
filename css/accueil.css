@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    padding-top: 50px;
+}
+.liste-agent {
+    width: 30%;
+    list-style-type:none;
+    margin-top: 20px;
+    padding: 0;
+}
+li {
+    border: 1px solid black;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+}
+a{
+    width: 100%;
+    color: black;
+    text-decoration:none;
+}
+a:hover{
+    color: black;
+    text-decoration:none;
+    color: grey;
+}
+.listeAccueil{
+    margin-top: 50px;
+}
+.liAccueil{
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    padding-top: 15px;
+}
