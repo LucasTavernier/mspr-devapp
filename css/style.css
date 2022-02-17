@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Roboto Light";
+    src: url("/fonts/Roboto-Light.tff") format("woff2"),
+    url("/fonts/Roboto-Light.tff") format("woff");
+}
+
+body{
+    font-family: "Roboto Light", sans-serif;
+}
+.content{
+    margin: 0 100px;
+}
+.navbar{
+    background-color: #379EC1;
+}
+h1{
+    color: #659224;
+}
+.div-haut{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+}
+img-identite{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.liste{
+    margin-top: 50px;
+}
+.liste-content{
+    text-align: right;
+    width: 30%;
+    list-style-type:none;
+    margin-top: 20px;
+}
+.logo{
+    width: 80px;
+    height: auto;
+}
