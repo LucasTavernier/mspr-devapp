@@ -71,7 +71,7 @@ public class Agent {
     }
 
     public String renderAgentHtmlGlobalList(){
-        return String.format("<a href=\"./fichesAgentsVues/%s.html\"><li class=\"liAccueil\"><p>%s %s</p><img class=\"fleche\" src=\"gosecuri/res/svg/fleche.svg\" alt=\"\"/></li></a>\n",this.getPathNameAgent(),this.name,this.surname);
+        return String.format("<a href=\"./fichesAgentsVues/%s.html\"><li class=\"liAccueil\"><p>%s %s</p><img class=\"fleche\" src=\"./res/svg/fleche.svg\" alt=\"\"/></li></a>\n",this.getPathNameAgent(),this.name,this.surname);
     }
 
     public void fillKeyWithValue(){
