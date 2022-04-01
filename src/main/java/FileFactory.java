@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 public class FileFactory {
 
-    private static final String PATHTOFICHES = "./res/fichesAgents/";
+    private static final String PATHTOFICHES = "gosecuri/res/fichesAgents";
 
     private FileFactory(){}
 
@@ -24,7 +24,7 @@ public class FileFactory {
     }
 
     public static void generateIndex(){
-        File file = new File("./vue/index.html");
+        File file = new File("./gosecuri/index.html");
         FileWriter myWriter;
         try {
             myWriter = new FileWriter(file);
@@ -64,7 +64,7 @@ public class FileFactory {
 
     public static void generateAllAgentHtmlFile(){
         for (Agent agent: FileFactory.getAgentListObject()) {
-            File file = new File("./vue/fichesAgentsVues/"+agent.surname.toLowerCase().charAt(0)+agent.name.toLowerCase()+".html");
+            File file = new File("./gosecuri/fichesAgentsVues/"+agent.surname.toLowerCase().charAt(0)+agent.name.toLowerCase()+".html");
             FileWriter myWriter;
             try {
                 myWriter = new FileWriter(file);
@@ -114,7 +114,7 @@ public class FileFactory {
 
     //Génère le fichier staff.txt grace aux répertoires présents dans le répertoire ./res/fichesAgents
     public static void generateStaffFile(){
-        File file = new File("./res/staff.txt");
+        File file = new File("gosecuri/res/staff.txt");
         FileWriter myWriter;
         try {
             myWriter = new FileWriter(file);
@@ -131,7 +131,7 @@ public class FileFactory {
     public static HashMap<String,String> getEquipementsListFromFile(){
         HashMap<String,String>tab = new HashMap<String,String>();
         try {
-            File file = new File("./res/liste.txt");
+            File file = new File("gosecuri/res/liste.txt");
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;
             while((line = br.readLine()) != null){
