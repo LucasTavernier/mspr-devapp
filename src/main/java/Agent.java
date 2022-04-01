@@ -22,7 +22,7 @@ public class Agent {
     public String renderEquipementList(){
         String result = "";
         for (Map.Entry<String,String> elt : this.equipement.entrySet()) {
-            result = result.concat(String.format("<li><img class='check' src='../../res/svg/check.svg' alt=''/>%s - %s</li>\n",elt.getKey(),elt.getValue()));
+            result = result.concat(String.format("<li><img class='check' src='gosecuri/res/svg/check.svg' alt=''/>%s - %s</li>\n",elt.getKey(),elt.getValue()));
         }
         return result;
     }
@@ -36,17 +36,17 @@ public class Agent {
                 "<head>\n" +
                 "<meta charset=\"utf-8\">\n" +
                 "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css\" integrity=\"sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn\" crossorigin=\"anonymous\">\n" +
-                "<link rel=\"stylesheet\" href=\"../../css/style.css\">\n" +
+                "<link rel=\"stylesheet\" href=\"gosecuri/css/style.css\">\n" +
                 "</head>\n" +
                 "<body>\n" +
                 "<nav class=\"navbar\">\n" +
-                "<a href=\"../index.html\"><img class=\"logo\" src=\"../../res/go-securi-logo-removebg-preview.png\" alt=\"\"/></a>\n" +
+                "<a href=\"../index.html\"><img class=\"logo\" src=\"gosecuri/res/go-securi-logo-removebg-preview.png\" alt=\"\"/></a>\n" +
                 "</nav>\n" +
                 "<div class=\"content\">\n" +
                 "<div class=\"div-haut d-flex\">\n" +
                 "<h1>"+this.name+" "+ this.surname +"</h1>\n" +
                 "<h2>"+this.tache+"</h2>\n"+
-                "<img class=\"img-identite\" src=\"../../res/fichesAgents/"+this.getPathNameAgent()+"/"+this.getPathNameAgent()+".jpg\" alt=\"\"/>\n" +
+                "<img class=\"img-identite\" src=\"gosecuri/res/fichesAgents/"+this.getPathNameAgent()+"/"+this.getPathNameAgent()+".jpg\" alt=\"\"/>\n" +
                 "</div>\n" +
                 "<div class=\"liste\">\n" +
                 "<h3>Liste du matériel</h3>\n" +

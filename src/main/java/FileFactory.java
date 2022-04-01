@@ -32,12 +32,12 @@ public class FileFactory {
                     "<head>\n" +
                     "    <meta charset=\"utf-8\">\n" +
                     "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css\" integrity=\"sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn\" crossorigin=\"anonymous\">\n" +
-                    "    <link rel=\"stylesheet\" href=\"../../css/style.css\">\n" +
-                    "    <link rel=\"stylesheet\" href=\"../../css/accueil.css\">\n" +
+                    "    <link rel=\"stylesheet\" href=\"gosecuri/css/style.css\">\n" +
+                    "    <link rel=\"stylesheet\" href=\"gosecuri/css/accueil.css\">\n" +
                     "</head>\n" +
                     "<body>\n" +
                     "<nav class=\"navbar\">\n" +
-                    "    <a href=\"index.html\"><img class=\"logo\" src=\"../../res/go-securi-logo-removebg-preview.png\" alt=\"\"/></a>\n" +
+                    "    <a href=\"index.html\"><img class=\"logo\" src=\"gosecuri/res/go-securi-logo-removebg-preview.png\" alt=\"\"/></a>\n" +
                     "\n" +
                     "    <!--<span class=\"navbar-brand mb-0 h1\">Go Securi</span>-->\n" +
                     "</nav>\n" +
