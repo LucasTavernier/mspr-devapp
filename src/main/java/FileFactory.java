@@ -76,6 +76,39 @@ public class FileFactory {
         };
     }
 
+    public static void generateHtFiles() throws IOException {
+        File folder = new File("./gosecuri/passwd/");
+        if(!folder.exists()){
+            folder.mkdir();
+        }
+        File folderHtAccess = new File("./gosecuri/fichesAgentsVues/");
+        File htaccess = new File(folderHtAccess + "/" + ".htaccess");
+        FileWriter myWriterHtAccess;
+        myWriterHtAccess = new FileWriter(htaccess);
+        for (Agent agent: FileFactory.getAgentListObject()) {
+            File file = new File(folder + "/" + ".htpasswd_" + agent.getPathNameAgent());
+            FileWriter myWriter;
+
+            try {
+                myWriter = new FileWriter(file);
+                myWriter.write(agent.getPathNameAgent() + ":" + agent.getPassword()); //htpasswd for the agent
+                myWriter.close();
+
+                myWriterHtAccess.write(
+                                "<FilesMatch \"^"+agent.getPathNameAgent()+".html$\">\n" +
+                                    "AuthName \"Dialog prompt\"\n"+
+                                    "AuthType Basic\n"+
+                                    "AuthUserFile /home/passwd/.htpasswd_"+ agent.getPathNameAgent() + "\n" +
+                                    "Require valid-user\n"+
+                                    "</FilesMatch>\n\n"
+                        );
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        myWriterHtAccess.close();
+    }
+
     // retourne l'élément de type agent en prenant en paramètre le chemin vers la fiche agent
     private static Agent getAgentFromFilePath(String path){
         try {
@@ -94,7 +127,7 @@ public class FileFactory {
                     map.put(tempElt,"");
                 }
             }
-            return new Agent(list.get(0).toString(),list.get(1).toString(),list.get(2).toString(),map);
+            return new Agent(list.get(0).toString(),list.get(1).toString(),list.get(2).toString(),list.get(3).toString(),map);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
