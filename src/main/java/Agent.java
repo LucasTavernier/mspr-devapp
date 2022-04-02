@@ -8,13 +8,15 @@ public class Agent {
     public String name;
     public String surname;
     public String tache;
+    public String password;
     public HashMap<String,String> equipement;
     public static HashMap<String,String> listeTousEquipement = FileFactory.getEquipementsListFromFile();
 
-    public Agent(String name,String surname,String tache,HashMap<String,String>equipement){
+    public Agent(String name,String surname,String tache,String pwd,HashMap<String,String>equipement){
         this.name = name;
         this.surname = surname;
         this.tache = tache;
+        this.password = pwd;
         this.equipement = equipement;
         this.fillKeyWithValue();
     }
@@ -82,6 +84,14 @@ public class Agent {
                 this.equipement.remove(id);
             }
         }
+    }
+
+    public String getName() {
+        return surname;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public String toString(){
