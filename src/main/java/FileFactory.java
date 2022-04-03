@@ -1,8 +1,4 @@
-package main.java;
-
 import java.io.*;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.apache.commons.codec.digest.Md5Crypt;
