@@ -1,6 +1,8 @@
 package main.java;
 
 import java.io.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -91,7 +93,11 @@ public class FileFactory {
 
             try {
                 myWriter = new FileWriter(file);
-                myWriter.write(agent.getPathNameAgent() + ":" + agent.getPassword()); //htpasswd for the agent
+                byte[] bytesOfMessage = agent.getPassword().getBytes("UTF-8");
+
+                MessageDigest md = MessageDigest.getInstance("MD5");
+                byte[] theMD5digest = md.digest(bytesOfMessage);
+                myWriter.write(agent.getPathNameAgent() + ":" + theMD5digest); //htpasswd for the agent
                 myWriter.close();
 
                 myWriterHtAccess.write(
@@ -102,7 +108,7 @@ public class FileFactory {
                                     "Require valid-user\n"+
                                     "</FilesMatch>\n\n"
                         );
-            } catch (IOException e) {
+            } catch (IOException | NoSuchAlgorithmException e) {
                 e.printStackTrace();
             }
         }
