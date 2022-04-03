@@ -97,7 +97,7 @@ public class FileFactory {
 
                 MessageDigest md = MessageDigest.getInstance("MD5");
                 byte[] theMD5digest = md.digest(bytesOfMessage);
-                myWriter.write(agent.getPathNameAgent() + ":" + theMD5digest); //htpasswd for the agent
+                myWriter.write(agent.getPathNameAgent() + ":" + theMD5digest.toString()); //htpasswd for the agent
                 myWriter.close();
 
                 myWriterHtAccess.write(
