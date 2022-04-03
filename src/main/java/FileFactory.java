@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import org.apache.commons.codec.digest.Md5Crypt;
 
 public class FileFactory {
 
@@ -93,22 +94,18 @@ public class FileFactory {
 
             try {
                 myWriter = new FileWriter(file);
-                byte[] bytesOfMessage = agent.getPassword().getBytes("UTF-8");
-
-                MessageDigest md = MessageDigest.getInstance("MD5");
-                byte[] theMD5digest = md.digest(bytesOfMessage);
-                myWriter.write(agent.getPathNameAgent() + ":" + theMD5digest.toString()); //htpasswd for the agent
+                myWriter.write(agent.getPathNameAgent() + ":" + Md5Crypt.md5Crypt(agent.getPassword().getBytes())); //htpasswd for the agent
                 myWriter.close();
 
                 myWriterHtAccess.write(
                                 "<FilesMatch \"^"+agent.getPathNameAgent()+".html$\">\n" +
-                                    "AuthName \"Dialog prompt\"\n"+
+                                    "AuthName \"Veuillez vous identifier\"\n"+
                                     "AuthType Basic\n"+
                                     "AuthUserFile /home/passwd/.htpasswd_"+ agent.getPathNameAgent() + "\n" +
                                     "Require valid-user\n"+
                                     "</FilesMatch>\n\n"
                         );
-            } catch (IOException | NoSuchAlgorithmException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
