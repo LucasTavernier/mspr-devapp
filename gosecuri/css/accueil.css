@@ -33,8 +33,3 @@ a:hover{
 p{
     padding-top: 15px;
 }
-@media (min-width: 640px) {
-    .liste-agent {
-        width: 100%;
-    }
-}
