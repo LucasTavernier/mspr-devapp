@@ -44,7 +44,10 @@ public class FileFactory {
                     "    <h1>Accueil</h1>\n" +
                     "    <div class=\"listeAccueil\">\n" +
                     "        <h2>Liste des agents</h2>\n" +
-                    "        <ul class=\"liste-agent\">\n" +
+                    "        <ul class=\"liste-agent w-100 d-lg-none d-block\">\n" +
+                                FileFactory.renderAllAgentIndexHtml() +
+                    "        </ul>\n" +
+                    "        <ul class=\"liste-agent w-75 d-none d-lg-block\">\n" +
                                 FileFactory.renderAllAgentIndexHtml() +
                     "        </ul>\n" +
                     "    </div>\n" +
