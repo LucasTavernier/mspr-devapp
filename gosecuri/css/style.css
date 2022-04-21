@@ -46,7 +46,7 @@ ul{
 .check{
     margin-right: 10px;
 }
-@media (max-width: 640px) {
+@media (min-width: 640px) {
     .div-haut{
         align-items: center;
         text-align: center;
