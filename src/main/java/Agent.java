@@ -43,15 +43,21 @@ public class Agent {
                 "<a href=\"../index.html\"><img class=\"logo\" src=\"../res/go-securi-logo-removebg-preview.png\" alt=\"\"/></a>\n" +
                 "</nav>\n" +
                 "<div class=\"content\">\n" +
-                "<div class=\"div-haut d-flex\">\n" +
-                "<h1>"+this.name+" "+ this.surname +"</h1>\n" +
-                "<h2>"+this.tache+"</h2>\n"+
+                "<div class=\"div-haut d-lg-flex\">\n" +
+                "<h1 class=\"mb-5 mb-lg-0\">"+this.name+" "+ this.surname +"</h1>\n" +
+                "<h2 class=\"mb-5 mb-lg-0\">"+this.tache+"</h2>\n"+
                 "<img class=\"img-identite\" src=\"../res/fichesAgents/"+this.getPathNameAgent()+"/"+this.getPathNameAgent()+".jpg\" alt=\"\"/>\n" +
                 "</div>\n" +
-                "<div class=\"liste\">\n" +
+                "<div class=\"liste d-none d-lg-block\">\n" +
                 "<h3>Liste du matériel</h3>\n" +
                 "<ul class=\"liste-content\">\n" +
                             this.renderEquipementList()+
+                "</ul>\n" +
+                "</div>\n" +
+                "<div  class=\"liste d-block d-lg-none mt-5\">\n" +
+                "<h3>Liste du matériel</h3>\n" +
+                "<ul class=\"liste-content\">\n" +
+                this.renderEquipementList()+
                 "</ul>\n" +
                 "</div>\n" +
                 "</div>\n" +
