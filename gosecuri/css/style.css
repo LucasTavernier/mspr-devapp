@@ -46,3 +46,12 @@ ul{
 .check{
     margin-right: 10px;
 }
+@media (max-width: 640px) {
+    .div-haut{
+        align-items: center;
+        text-align: center;
+    }
+    .liste {
+        margin-top: 30px;
+    }
+}
