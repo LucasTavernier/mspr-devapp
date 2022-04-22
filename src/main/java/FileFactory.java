@@ -47,7 +47,7 @@ public class FileFactory {
                     "        <ul class=\"liste-agent w-100 d-lg-none d-block\">\n" +
                                 FileFactory.renderAllAgentIndexHtml() +
                     "        </ul>\n" +
-                    "        <ul class=\"liste-agent w-75 d-none d-lg-block\">\n" +
+                    "        <ul class=\"liste-agent d-none d-lg-block\">\n" +
                                 FileFactory.renderAllAgentIndexHtml() +
                     "        </ul>\n" +
                     "    </div>\n" +
