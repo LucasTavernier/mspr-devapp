@@ -18,6 +18,8 @@ public class Agent {
         this.equipement = equipement;
         this.fillKeyWithValue();
     }
+    
+    
 
     public String renderEquipementList(){
         String result = "";
